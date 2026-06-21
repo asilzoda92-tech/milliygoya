@@ -685,4 +685,31 @@ header nav a:hover {
     .sub-menu-grid {
         flex-direction: column; /* Telefonlarda rasmda turgandek qulay pastma-past tushadi */
     }
+}/* --- Qahramon (Banner) qismini ilmiy va ixcham qilish --- */
+#home {
+    background-color: #ffffff; /* Oq fon ko'proq bo'lishi uchun */
+    padding-top: 40px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Rasmni shundoq markazga tekislaydi */
+}
+
+.banner-img {
+    width: 85%; /* Rasmni chetlardan qisib, ixcham qiladi */
+    max-width: 900px; /* Katta ekranlarda ham me'yordan oshib ketmaydi */
+    height: 380px; /* Balandligi me'yorlashtirildi */
+    object-fit: cover; /* Rasm sifati buzilmasdan joylashadi */
+    border-radius: 12px; /* Burchaklari nafis silliq */
+    border: 4px solid #ffffff; /* Rasm atrofida oq ramka */
+    box-shadow: 0 10px 30px rgba(30, 58, 138, 0.08); /* Nafis ilmiy to'q ko'k soya */
+    margin: 0 auto 25px auto;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+/* Sichqoncha rasmga kelganda olijanob salobat beradi */
+.banner-img:hover {
+    transform: scale(1.01);
+    box-shadow: 0 15px 35px rgba(30, 58, 138, 0.12);
 }
