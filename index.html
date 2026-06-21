@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Buxgalteriya hisobi va moliya kafedrasi</title>
+    <title>Milliy g‘oya kafedrasi</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,8 +12,8 @@
         <div class="logo">FDU - Milliy g‘oya, ma'naviyat asoslari va huquq ta'limi</div>
         <nav>
             <a href="#home">Bosh sahifa</a>
-            <a href="#about">Kafedra haqida</a>
-            <a href="#teachers">O'qituvchilar</a>
+            <a href="about.html" target="_blank">Kafedra haqida</a>
+            <a href="teachers.html" target="_blank">O'qituvchilar</a>
             <a href="#syllabus">O'quv dasturlar</a>
         </nav>
     </header>
@@ -26,78 +26,3 @@
         <span class="code-number">60111100</span>
         <p class="platform-text">Milliy g‘oya, ma'naviyat asoslari va huquq ta'limi yo‘nalishi uchun elektron ta'lim platformasi</p>
     </div>
-</section>
-    <section id="about">
-        <h2>Kafedra haqida ma'lumot</h2>
-        <p class="instruction">Ma'lumotni ko'rish uchun sarlavhalar ustiga bosing:</p>
-        
-        <div class="accordion-container">
-            <div class="accordion-item">
-                <div class="accordion-header">Bizning bosh maqsadimiz <span>+</span></div>
-                <div class="accordion-content">
-                    <p>Buxgalteriya hisobi va moliya kafedrasi xalqaro standartlarga integratsiyalashuv va mehnat bozori talablariga javob beradigan raqobatbardosh kadrlar tayyorlashni ta'minlashni maqsad qilgan. O'quv jarayoni milliy va xalqaro moliyaviy hisobot standartlari (IFRS) talablariga muvofiq tashkil etiladi.</p>
-                </div>
-            </div>
-
-            <div class="accordion-item">
-                <div class="accordion-header">Asosiy vazifalarimiz va istiqbollar (2026-2030) <span>+</span></div>
-                <div class="accordion-content">
-                    <p>Kafedramiz 70410201 - Buxgalteriya hisobi mutaxassisligi bo'yicha o'quv jarayonini to'liq raqamlashtirish, barcha o'quv materiallari va topshiriqlarni HEMIS va LMS tizimlariga to'liq yuklashni ta'minlaydi. Shuningdek, o'quv rejalari dunyoning TOP-300 universitetlari tajribasi asosida modernizatsiya qilinadi.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <script>
-        const headers = document.querySelectorAll('.accordion-header');
-        
-        headers.forEach(header => {
-            header.addEventListener('click', function() {
-                this.classList.toggle('active');
-                const content = this.nextElementSibling;
-                const span = this.querySelector('span');
-                
-                if (content.style.maxHeight) {
-                    content.style.maxHeight = null;
-                    span.textContent = '+';
-                } else {
-                    content.style.maxHeight = content.scrollHeight + "px";
-                    span.textContent = '-';
-                }
-            });
-        });
-    </script>
-
-    <section id="teachers">
-        <h2>Kafedra professor-o'qituvchilari</h2>
-        <div class="teacher-grid">
-            <div class="teacher-card">
-                <h3>F. Falsafov</h3>
-                <p>Kafedra mudiri, PhD.</p>
-            </div>
-            <div class="teacher-card">
-                <h3>H. Huquq</h3>
-                <p>Katta o'qituvchi</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="syllabus">
-        <h2>Fan dasturlari va Sillabuslar</h2>
-        <p>Kerakli fanning sillabusini yuklab olish uchun tugmani bosing:</p>
-        
-        <div class="syllabus-list">
-            <div class="syllabus-item">
-                <span>Milliy g'oya va mafkura asoslari (Sillabus)</span>
-                <a href="docs/Mehnat daftarchasi yuritish qoidalari..pdf" download class="download-btn">Yuklab olish</a>
-            </div>
-            
-            <div class="syllabus-item">
-                <span>Inson huquqlari va davlat huquqi (Sillabus)</span>
-                <a href="#" class="download-btn">Tez kunda</a>
-            </div>
-        </div>
-    </section>
-
-</body>
-</html>
