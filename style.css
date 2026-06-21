@@ -1,0 +1,254 @@
+/* Umumiy sozlamalar */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f6f9;
+    color: #333;
+}
+
+/* Yuqori menyu dizayni */
+header {
+    background-color: #1e3a8a; /* Universitetbop to'q ko'k rang */
+    color: white;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+header nav a:hover {
+    color: #38bdf8; /* Sichqoncha ustiga kelganda och ko'k bo'ladi */
+}
+
+/* Asosiy banner qismi */
+#home {
+    text-align: center;
+    padding: 80px 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+#home h1 {
+    color: #1e3a8a;
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+/* O'qituvchilar bo'limi */
+#teachers {
+    padding: 50px;
+    text-align: center;
+}
+
+#teachers h2 {
+    color: #1e3a8a;
+    margin-bottom: 30px;
+}
+
+.teacher-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.teacher-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 250px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    border-top: 4px solid #1e3a8a; /* Kartaning tepasiga ko'k chiziq */
+}/* Sillabuslar bo'limi dizayni */
+#syllabus {
+    padding: 50px;
+    background-color: #ffffff;
+    text-align: center;
+    margin-top: 30px;
+    box-shadow: 0 -4px 6px rgba(0,0,0,0.02);
+}
+
+#syllabus h2 {
+    color: #1e3a8a;
+}
+
+.syllabus-list {
+    max-width: 600px;
+    margin: 30px auto;
+    text-align: left;
+}
+
+.syllabus-item {
+    background-color: #f4f6f9;
+    padding: 15px 20px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-left: 5px solid #38bdf8; /* Chap tarafiga och ko'k chiziq */
+}
+
+.syllabus-item span {
+    font-weight: 500;
+}
+
+/* Yuklab olish tugmasi dizayni */
+.download-btn {
+    background-color: #1e3a8a;
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.download-btn:hover {
+    background-color: #38bdf8;
+    color: #1e3a8a;
+}/* Yuklab olish bo'limidagi matn rangini to'g'rilash */
+.syllabus-item span {
+    color: #1e3a8a; /* Matn rangini chiroyli to'q ko'k qiladi */
+}
+
+/* "Tez kunda" deb yozilgan havolani ham ko'rinadigan qilish */
+.syllabus-item a[href="#"] {
+    color: #ef4444; /* Uni qizil rangda ko'rsatadi */
+    text-decoration: none;
+    font-weight: bold;
+}/* Banner rasmi dizayni */
+.banner-img {
+    width: 100%;
+    max-width: 800px; /* Rasm kengligini chegaralaydi */
+    height: 350px;
+    object-fit: cover; /* Rasmni cho'zib yubormasdan chiroyli kesadi */
+    border-radius: 12px; /* Burchaklarini yumaloq qiladi */
+    margin-bottom: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Rasmga soya beradi */
+}/* Ochilib chiquvchi blok dizayni */
+#about {
+    padding: 60px 20px;
+    background-color: #f8fafc;
+    text-align: center;
+}
+
+.instruction {
+    color: #6b7280;
+    margin-bottom: 25px;
+    font-style: italic;
+}
+
+.accordion-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.accordion-item {
+    background-color: white;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    border-left: 5px solid #1e3a8a;
+}
+
+.accordion-header {
+    background-color: #ffffff;
+    color: #1e3a8a;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background 0.3s;
+    user-select: none;
+}
+
+.accordion-header:hover {
+    background-color: #f1f5f9;
+}
+
+.accordion-header span {
+    font-size: 22px;
+    color: #38bdf8;
+    transition: 0.3s;
+}
+
+/* Berkinib turadigan kontent qismi */
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    background-color: #fcfdfe;
+}
+
+.accordion-content p {
+    padding: 0 20px 20px 20px;
+    margin: 0;
+    line-height: 1.6;
+    color: #4b5563;
+}/* "Xush kelibsiz" sarlavhasi dizayni */
+#home h1 {
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    color: #1e3a8a;
+    font-size: 38px;
+    font-weight: 800;
+    margin-bottom: 25px;
+    letter-spacing: -0.5px; /* Harflarni bir-biriga yaqinroq va nafis qiladi */
+}
+
+/* Yangi zamonaviy blok (Badge) dizayni */
+.platform-badge {
+    background: linear-gradient(135deg, #f0f4f8 0%, #e2e8f0 100%);
+    border-left: 5px solid #38bdf8; /* Och ko'k urg'u chizig'i */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 12px 25px;
+    border-radius: 30px; /* Yumaloq chiroyli kapsula shakli */
+    max-width: 85%;
+    margin: 0 auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+/* Yo'nalish kodi (60111100) uchun chiroyli ko'k quticha */
+.code-number {
+    background-color: #1e3a8a;
+    color: white;
+    font-weight: bold;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+/* Asosiy matn shrifti va dizayni */
+.platform-text {
+    margin: 0;
+    color: #334155;
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase; /* Harflarni tartibli katta qiladi */
+    letter-spacing: 0.5px;
+    line-height: 1.4;
+    text-align: left;
+}
