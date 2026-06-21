@@ -8,30 +8,68 @@ body {
 }
 
 /* Yuqori menyu dizayni */
+/* 2. Header va Navigatsiya Menyusi (Yangilangan) */
 header {
-    background-color: #1e3a8a; /* Universitetbop to'q ko'k rang */
-    color: white;
-    padding: 20px 50px;
+    background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%);
+    padding: 15px 5%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-header .logo {
-    font-size: 20px;
-    font-weight: bold;
+/* Chap tomondagi akademik matnlar bloki */
+.logo-area {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.univ-name {
+    color: #38bdf8; /* Och havorang urg'u */
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.faculty-name {
+    color: #94a3b8;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+header h1.dept-name {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: 2px;
+    letter-spacing: -0.3px;
+}
+
+/* O'ng tomondagi menyu tugmalari */
+header nav {
+    display: flex;
+    gap: 10px;
 }
 
 header nav a {
-    color: white;
+    color: #cbd5e1;
     text-decoration: none;
-    margin-left: 20px;
-    font-weight: bold;
-    transition: 0.3s;
+    font-weight: 500;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    padding: 8px 14px;
+    border-radius: 6px;
+    white-space: nowrap; /* Yozuvlar ikki qatorga bo'linib ketmasligi uchun */
 }
 
 header nav a:hover {
-    color: #38bdf8; /* Sichqoncha ustiga kelganda och ko'k bo'ladi */
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 /* Asosiy banner qismi */
@@ -131,20 +169,26 @@ header nav a:hover {
     color: #ef4444; /* Uni qizil rangda ko'rsatadi */
     text-decoration: none;
     font-weight: bold;
-}/* Banner rasmi dizayni */
-.banner-img {
-    width: 100%;
-    max-width: 800px; /* Rasm kengligini chegaralaydi */
-    height: 350px;
-    object-fit: cover; /* Rasmni cho'zib yubormasdan chiroyli kesadi */
-    border-radius: 12px; /* Burchaklarini yumaloq qiladi */
-    margin-bottom: 20px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Rasmga soya beradi */
-}/* Ochilib chiquvchi blok dizayni */
-#about {
-    padding: 60px 20px;
-    background-color: #f8fafc;
+/* --- Rasm va Banner Qismi --- */
+#hero {
+    max-width: 1000px;
+    margin: 40px auto 20px auto; /* Tepadagi menyudan va pastdagi matndan chiroyli masofa */
+    padding: 0 20px;
     text-align: center;
+}
+
+#hero img {
+    width: 100%;
+    max-height: 400px; /* Rasmni juda katta bo'lib ketishidan saqlaydi */
+    object-fit: cover; /* Rasmni cho'zib yubormasdan, chiroyli kesib joylashtiradi */
+    border-radius: 16px; /* Burchaklarini zamonaviy yumaloq qiladi */
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08); /* Atrofiga muloyim professional soya beradi */
+    transition: transform 0.3s ease;
+}
+
+#hero img:hover {
+    transform: scale(1.01); /* Sichqoncha kelganda rasm salgina kattalashadi */
+}
 }
 
 .instruction {
@@ -251,4 +295,394 @@ header nav a:hover {
     letter-spacing: 0.5px;
     line-height: 1.4;
     text-align: left;
+}/* Akkordeon ichidagi raqamlangan ro'yxat dizayni */
+.task-list {
+    padding-left: 20px;
+    padding-bottom: 20px;
+    margin: 0;
+    color: #4b5563;
+}
+
+.task-list li {
+    margin-bottom: 10px; /* Qatorlar orasidagi masofa */
+    line-height: 1.5;
+    font-size: 15px;
+}
+
+.task-list li::marker {
+    color: #1e3a8a; /* Raqamlarning rangini to'q ko'k qiladi */
+    font-weight: bold;
+}/* O'qituvchilar blokining ichki dizayni */
+.teacher-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.teacher-card {
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 20px;
+    width: 220px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    transition: transform 0.2s;
+}
+
+.teacher-card:hover {
+    transform: translateY(-5px); /* Sichqoncha kelganda ozgina tepaga ko'tariladi */
+    border-color: #38bdf8;
+}
+
+.teacher-avatar {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.teacher-card h3 {
+    margin: 10px 0 5px 0;
+    color: #1e3a8a;
+    font-size: 18px;
+}
+
+.role {
+    margin: 0;
+    font-weight: bold;
+    color: #334155;
+    font-size: 14px;
+}
+
+.degree {
+    margin: 5px 0 0 0;
+    color: #64748b;
+    font-size: 13px;
+}/* --- Bakalavr va Magistr bloklari tizimi --- */
+.edu-stages-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Ikki blok orasidagi masofa */
+    align-items: center;
+    margin-top: 25px;
+}
+
+.stage-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background-color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 50px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
+    width: 100%;
+    max-width: 850px;
+}
+
+/* --- Professional Yo'nalishlar Dizayni --- */
+.program-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 750px;
+    margin: 30px auto 0 auto;
+}
+
+.program-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 20px 24px;
+    text-align: left; /* Matnni chapdan tekislaydi, bu o'qishni osonlashtiradi */
+    box-shadow: 0 4px 6px -1px rgba(15, 23, 42, 0.03);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Sichqoncha kelgandagi nozik effekt */
+.program-card:hover {
+    transform: translateX(4px); /* O'ngga biroz jilb saytni jonli ko'rsatadi */
+    border-color: #38bdf8;
+    box-shadow: 0 10px 20px -5px rgba(15, 23, 42, 0.06);
+}
+
+.program-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+/* Nishonchalar (Badges) */
+.program-badge {
+    padding: 4px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.program-badge.bachelor {
+    background-color: #e0f2fe;
+    color: #0369a1;
+}
+
+.program-badge.master {
+    background-color: #dcfce7;
+    color: #15803d;
+}
+
+/* Shaffof va chiroyli yo'nalish kodi */
+.program-code {
+    font-family: monospace; /* Kodlar uchun maxsus shrift */
+    background-color: #f1f5f9;
+    color: #475569;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    border: 1px dashed #cbd5e1;
+}
+
+/* Yo'nalish nomi */
+.program-title {
+    color: #0f172a;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1.4;
+    margin: 0;
+}/* --- Yo'nalishlar ichidagi yangi menyu dizayni --- */
+.program-card.accordion-item {
+    padding: 0; /* Ichki kontent silliq ochilishi uchun chetlarini tozalaymiz */
+    cursor: pointer;
+}
+
+.program-header.accordion-header {
+    padding: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.right-area {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.arrow {
+    color: #94a3b8;
+    font-size: 12px;
+    transition: transform 0.3s ease;
+}
+
+/* Kartochka ochilganda strelkani tepaga qaratadi */
+.accordion-item.active .arrow {
+    transform: rotate(180deg);
+    color: #1e3a8a;
+}
+
+/* Ichki hujjatlar joylashuvi (Grid) */
+.sub-menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    padding: 0 24px 24px 24px; /* Faqat ochilganda ko'rinadigan chiroyli masofalar */
+    background-color: #f8fafc; /* Och kulrang ichki fon */
+}
+
+/* Ichki tugmalar (Hujjat havolalari) */
+.sub-menu-item {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 14px 18px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.sub-menu-item:hover {
+    border-color: #38bdf8;
+    background-color: #f0fdfa; /* Yengil och yashil-havorang effekt */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.sub-menu-item .icon {
+    font-size: 24px;
+    background: #f1f5f9;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.sub-menu-item h4 {
+    margin: 0;
+    color: #1e3a8a;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.sub-menu-item p {
+    margin: 2px 0 0 0;
+    color: #64748b;
+    font-size: 11px;
+    padding: 0; /* Eski p uslublarini bekor qiladi */
+}/* Mana shu kod yo'nalishlar kartochkasi silliq ochilishi uchun shart: */
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out; /* Silliq pastga tushish effekti */
+}/* --- 1. Xush kelibsiz sarlavhasi dizayni --- */
+.welcome-section h2 {
+    color: #1e3a8a; /* Milliy to'q ko'k rang */
+    font-size: 32px;
+    font-weight: 800;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 35px;
+    letter-spacing: -0.5px;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+/* Sarlavha tagidagi chiroyli mitti chiziqcha */
+.welcome-section h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, #38bdf8, #1e3a8a);
+    margin: 12px auto 0 auto;
+    border-radius: 2px;
+}
+
+/* --- 2. Qisilib qolgan ichki menyuni havodor qilish --- */
+.program-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px; /* Burchaklari yanada silliq */
+    margin-bottom: 20px;
+    box-shadow: 0 4px 15px rgba(15, 23, 42, 0.02);
+    overflow: hidden;
+}
+
+.sub-menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Bloklar kengligi kengaytirildi */
+    gap: 20px; /* Bloklar orasidagi masofa ochildi */
+    padding: 24px 30px 30px 30px; /* Chetlaridan keng joy tashlandi */
+    background-color: #f8fafc; /* Toza va yengil fon */
+    border-top: 1px solid #f1f5f9;
+}
+
+.sub-menu-item {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 20px 18px; /* Ichki havo ko'paytirildi */
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-decoration: none;
+    transition: all 0.25s ease;
+}
+
+/* Sichqoncha kelganda nafis reaksiya */
+.sub-menu-item:hover {
+    border-color: #38bdf8;
+    background-color: #f0fdfa; 
+    transform: translateY(-3px); /* Bir oz tepaga ko'tariladi */
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.06);
+}
+
+.sub-menu-item .icon {
+    font-size: 26px;
+    background: #f1f5f9;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sub-menu-item h4 {
+    margin: 0;
+    color: #1e3a8a;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.sub-menu-item p {
+    margin: 4px 0 0 0;
+    color: #64748b;
+    font-size: 12px;
+    line-height: 1.3;
+}/* --- Ichki bo'limlarni bitta qatorga chiroyli tekislash --- */
+.sub-menu-grid {
+    display: flex;
+    flex-direction: row; /* Elementlarni majburiy bitta qatorga tizadi */
+    justify-content: space-between; /* Bloklar orasini teng ochadi */
+    gap: 15px; /* Bloklar orasidagi masofa */
+    padding: 20px 24px 24px 24px;
+    background-color: #f8fafc;
+    border-top: 1px solid #e2e8f0;
+}
+
+/* Ichidagi har bir tugma (Card) dizayni */
+.sub-menu-item {
+    flex: 1; /* Hamma tugmalar bir xil teng kenglikda bo'ladi */
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 16px 14px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    transition: all 0.25s ease;
+    min-width: 0; /* Matnlar sig'may qolib chetga chiqib ketmasligi uchun */
+}
+
+/* Sichqoncha kelganda nafis effekt */
+.sub-menu-item:hover {
+    border-color: #38bdf8;
+    background-color: #f0fdfa;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(15, 23, 42, 0.05);
+}
+
+.sub-menu-item .icon {
+    font-size: 24px;
+    background: #f1f5f9;
+    padding: 8px;
+    border-radius: 8px;
+    flex-shrink: 0; /* Ikonka siqilib qolmasligi uchun */
+}
+
+.sub-menu-item h4 {
+    margin: 0;
+    color: #1e3a8a;
+    font-size: 14px;
+    font-weight: 700;
+    white-space: nowrap; /* Yozuv bitta qatorda tursin */
+}
+
+.sub-menu-item p {
+    margin: 2px 0 0 0;
+    color: #64748b;
+    font-size: 11px;
+    line-height: 1.2;
+}
+
+/* --- Mobil telefonlar uchun moslashuvchanlik (Responsive) --- */
+@media (max-width: 768px) {
+    .sub-menu-grid {
+        flex-direction: column; /* Telefonlarda rasmda turgandek qulay pastma-past tushadi */
+    }
 }

@@ -9,20 +9,128 @@
 <body>
 
     <header>
-        <div class="logo">FDU - Milliy g‘oya, ma'naviyat asoslari va huquq ta'limi</div>
+        <div class="logo-area">
+            <span class="univ-name">Farg‘ona davlat universiteti</span>
+            <span class="faculty-name">Tarix fakulteti</span>
+            <h1 class="dept-name">Milliy g‘oya kafedrasi</h1>
+        </div>
+
         <nav>
-            <a href="#home">Bosh sahifa</a>
+            <a href="index.html">Bosh sahifa</a>
             <a href="about.html">Kafedra haqida</a>
-            <a href="teachers.html">O'qituvchilar</a>
-            <a href="#syllabus">O'quv dasturlar</a>
+            <a href="teachers.html">Professor-o'qituvchilar</a>
+            <a href="#syllabus">O'quv dasturlari</a>
         </nav>
     </header>
 
     <section id="home">
-        <img src="bino.jpg" alt="Universitet binosi" class="banner-img">
-        <h1>Milliy g‘oya kafedrasiga xush kelibsiz!</h1>
-        <!-- Yozuvni go'zal qilish uchun yangi klasslar berdik -->
-    <div class="platform-badge">
-        <span class="code-number">60111100</span>
-        <p class="platform-text">Milliy g‘oya, ma'naviyat asoslari va huquq ta'limi yo‘nalishi uchun elektron ta'lim platformasi</p>
-    </div>
+        <div id="hero">
+            <img src="bino.jpg" alt="Universitet binosi" class="banner-img">
+        </div>
+
+        <div class="welcome-section">
+            <h2>Milliy g‘oya kafedrasiga xush kelibsiz!</h2>
+            
+            <div class="program-grid">
+                
+                <div class="program-card">
+                    <div class="program-header" onclick="toggleProgram('bakalavr-content', this)">
+                        <div>
+                            <span class="program-badge bachelor">Bakalavriat</span>
+                            <h3 class="program-title">Milliy g‘oya, ma'naviyat asoslari va huquq ta'limi yo‘nalishi</h3>
+                        </div>
+                        <div class="right-area">
+                            <span class="program-code">60111100</span>
+                            <span class="arrow">▼</span>
+                        </div>
+                    </div>
+                    
+                    <div id="bakalavr-content" class="accordion-content">
+                        <div class="sub-menu-grid">
+                            <a href="docs/malaka_bakalavr.pdf" target="_blank" class="sub-menu-item">
+                                <span class="icon">📋</span>
+                                <div>
+                                    <h4>Malaka talablari</h4>
+                                    <p>Yo'nalishning rasmiy davlat standartlari</p>
+                                </div>
+                            </a>
+                            <a href="docs/reja_bakalavr.pdf" target="_blank" class="sub-menu-item">
+                                <span class="icon">📅</span>
+                                <div>
+                                    <h4>O‘quv rejalar</h4>
+                                    <p>Semestrlar bo'yicha fanlar taqsimoti</p>
+                                </div>
+                            </a>
+                            <a href="docs/dastur_bakalavr.pdf" target="_blank" class="sub-menu-item">
+                                <span class="icon">📚</span>
+                                <div>
+                                    <h4>O‘quv dasturlari</h4>
+                                    <p>Fanlarning sillabuslari va mundarijasi</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="program-card">
+                    <div class="program-header" onclick="toggleProgram('magistr-content', this)">
+                        <div>
+                            <span class="program-badge master">Magistratura</span>
+                            <h3 class="program-title">Ijtimoiy-gumanitar fanlarni o‘qtish metodikasi (ma’naviyat asoslari) mutaxassisligi</h3>
+                        </div>
+                        <div class="right-area">
+                            <span class="program-code">70111101</span>
+                            <span class="arrow">▼</span>
+                        </div>
+                    </div>
+                    
+                    <div id="magistr-content" class="accordion-content">
+                        <div class="sub-menu-grid">
+                            <a href="docs/malaka_magistr.pdf" target="_blank" class="sub-menu-item">
+                                <span class="icon">📋</span>
+                                <div>
+                                    <h4>Malaka talablari</h4>
+                                    <p>Magistratura mutaxassislik talablari</p>
+                                </div>
+                            </a>
+                            <a href="docs/reja_magistr.pdf" target="_blank" class="sub-menu-item">
+                                <span class="icon">📅</span>
+                                <div>
+                                    <h4>O‘quv rejalar</h4>
+                                    <p>Ilmiy va o'quv rejalari majmuasi</p>
+                                </div>
+                            </a>
+                            <a href="docs/dastur_magistr.pdf" target="_blank" class="sub-menu-item">
+                                <span class="icon">📚</span>
+                                <div>
+                                    <h4>O‘quv dasturlari</h4>
+                                    <p>Mutaxassislik fanlari dasturlari</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div> </div> </section> <script>
+        function toggleProgram(contentId, headerElement) {
+            const content = document.getElementById(contentId);
+            const card = headerElement.parentElement;
+            const arrow = headerElement.querySelector('.arrow');
+            
+            // Faol klasni o'zgartirish
+            card.classList.toggle('active');
+            
+            if (card.classList.contains('active')) {
+                // Ichidagi tugmalarning haqiqiy balandligini o'lchab ochadi
+                content.style.maxHeight = content.scrollHeight + "px";
+                arrow.style.transform = "rotate(180deg)";
+            } else {
+                // Yopilganda balandlikni nol qiladi
+                content.style.maxHeight = "0";
+                arrow.style.transform = "rotate(0deg)";
+            }
+        }
+    </script>
+
+</body>
+</html>
