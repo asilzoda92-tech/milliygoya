@@ -32,29 +32,116 @@
         <div class="teacher-grid">
             <!-- 1-O'qituvchi -->
             <div class="teacher-card">
-                <div class="teacher-avatar">👨‍🏫</div>
-                <h3>F. Falsafov</h3>
+                <div class="teacher-avatar">
+                    <img src="kafedra_mudir.jpg" alt="Kafedra mudiri" class="teacher-avatar-img">
+                </div>
                 <p class="role">Kafedra mudiri</p>
-                <p class="degree">Falsafa fanlari nomzodi, PhD</p>
+                <p class="degree">Falsafa fanlari doktori (DSc)</p>
+                <p class="full-name">Tolipov Baxtiyor Xamitovich</p>
             </div>
             
             <!-- 2-O'qituvchi -->
             <div class="teacher-card">
-                <div class="teacher-avatar">👩‍🏫</div>
-                <h3>H. Huquqov</h3>
-                <p class="role">Katta o'qituvchi</p>
-                <p class="degree">Huquqshunoslik mutaxassisi</p>
+                <div class="teacher-avatar">
+                    <img src="serobaka.jpg" alt="Kafedra dotsenti" class="teacher-avatar-img">
+                </div>
+                <p class="role">Kafedra dotsenti</p>
+                <p class="degree">Falsafa fanlari doktori (DSc)</p>
+                <p class="full-name">Yuldashev Serobjon Urmonaliyevich</p>
             </div>
 
             <!-- 3-O'qituvchi -->
             <div class="teacher-card">
-                <div class="teacher-avatar">👨‍🏫</div>
-                <h3>A. Ma'naviyatov</h3>
-                <p class="role">O'qituvchi</p>
-                <p class="degree">Ma'naviyat asoslari mutaxassisi</p>
+                <div class="teacher-avatar">
+                    <img src="Normatova.jpg" alt="Kafedra dotsenti" class="teacher-avatar-img">
+                </div>
+                <p class="role">Kafedra dotsenti</p>
+                <p class="degree">Falsafa fanlari nomzodi</p>
+                <p class="full-name">Normatova Dildor Esonaliyevna</p>
+            </div>
+
+            <!-- 4-O'qituvchi -->
+            <div class="teacher-card">
+                <div class="teacher-avatar">
+                    <img src="akmalxonaka.jpg" alt="Kafedra dotsenti" class="teacher-avatar-img">
+                </div>
+                <p class="role">Kafedra dotsenti</p>
+                <p class="degree">Falsafa fanlari bo‘yicha falsafa doktori (PhD)</p>
+                <p class="full-name">Sayitxonov Akmalxon Axatjonovich</p>
+            </div>
+
+            <!-- 5-O'qituvchi -->
+            <div class="teacher-card">
+                <div class="teacher-avatar">
+                    <img src="Azizxon.jpg" alt="Kafedra katta o'qituvchisi" class="teacher-avatar-img">
+                </div>
+                <p class="role">Kafedra katta o‘qituvchisi</p>
+                <p class="degree">Falsafa fanlari bo‘yicha falsafa doktori (PhD)</p>
+                <p class="full-name">Rasulov Azizxon Muhammadqodirovich</p>
+            </div>
+
+            <!-- 6-O'qituvchi -->
+            <div class="teacher-card">
+                <div class="teacher-avatar">
+                    <img src="Asilbek.jpg" alt="Kafedra katta o'qituvchisi" class="teacher-avatar-img">
+                </div>
+                <p class="role">Kafedra katta o‘qituvchisi</p>
+                <p class="degree">Falsafa fanlari bo‘yicha falsafa doktori (PhD)</p>
+                <p class="full-name">Mo‘ydinov Asilbek Adxam o‘g‘li</p>
             </div>
         </div>
     </div>
+<!-- Professor-o'qituvchilar ro'yxatidan keyin joylashtiriladi -->
+<section class="shtat-section" style="margin: 30px auto; max-width: 800px; padding: 0 15px;">
+        <div class="shtat-container">
+            <div class="shtat-card" style="background-color: #ffffff; border-radius: 12px; padding: 25px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); border-left: 5px solid #0056b3; display: flex; flex-direction: column; gap: 15px;">
+                
+                <div class="shtat-info">
+                    <h3 style="margin: 0 0 5px 0; color: #002855; font-size: 20px;">2025-2026 kafedra shtat jadvali</h3>
+                    <p style="margin: 0; color: #666; font-size: 14px; line-height: 1.5;">Kafedrada faoliyat ko‘rsatayotgan professor-o‘qituvchilarning joriy o‘quv yilidagi shtat birliklari va yuklamalari taqsimoti.</p>
+                </div>
 
+                <div class="shtat-action">
+                    <a href="docs/kafedra_shtat.pdf" style="display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; background-color: #0056b3; color: white; text-decoration: none; border-radius: 6px; font-weight: bold; font-size: 14px; transition: background-color 0.2s;">
+                        📄 Hujjatni brauzerda ko‘rish
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+ <div class="ai-chat-wrapper">
+    <div class="ai-chat-box" id="aiChatBox">
+        <div class="ai-chat-header">
+            <span class="ai-status-dot"></span>
+            <h4>AI Assistent (Gemini)</h4>
+            <button onclick="toggleAiChat()" class="close-chat-btn">&times;</button>
+        </div>
+        <div class="ai-chat-body">
+            <div class="ai-message system">
+                Salom! Men kafedra AI assistentiman. Sizga qanday yordam bera olaman?
+            </div>
+        </div>
+        <div class="ai-chat-footer">
+            <input type="text" placeholder="Savolingizni yozing..." id="aiInput">
+            <button id="sendAiBtn">➤</button>
+        </div>
+    </div>
+
+    <button class="ai-chat-toggle-btn" onclick="toggleAiChat()">
+        🤖
+    </button>
+</div>
+
+<script>
+function toggleAiChat() {
+    const chatBox = document.getElementById('aiChatBox');
+    if (chatBox.style.display === 'flex') {
+        chatBox.style.display = 'none';
+    } else {
+        chatBox.style.display = 'flex';
+    }
+}
+</script>               
 </body>
 </html>
