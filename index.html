@@ -30,86 +30,121 @@
 
         <div class="welcome-section">
             <h2>Milliy g‘oya kafedrasiga xush kelibsiz!</h2>
-            
+            <section class="stats-section">
+    <div class="stat-card">
+        <span class="stat-number" data-target="12">0</span>
+        <h3>Professor-o‘qituvchilar</h3>
+    </div>
+
+    <div class="stat-card">
+        <span class="stat-number" data-target="58">0</span>
+        <h3>Bitiruvchilar</h3>
+    </div>
+
+    <div class="stat-card">
+        <span class="stat-number" data-target="38">0</span>
+        <h3>Fanlar</h3>
+    </div>
+
+    <div class="stat-card">
+        <span class="stat-number" data-target="10">0</span>
+        <h3>Mukofotlar</h3>
+    </div>
+</section>
             <div class="program-grid">
                 
-                <div class="program-card">
-                    <div class="program-header" onclick="toggleProgram('bakalavr-content', this)">
-                        <div>
-                            <span class="program-badge bachelor">Bakalavriat</span>
-                            <h3 class="program-title">Milliy g‘oya, ma'naviyat asoslari va huquq ta'limi yo‘nalishi</h3>
-                        </div>
-                        <div class="right-area">
-                            <span class="program-code">60111100</span>
-                            <span class="arrow">▼</span>
-                        </div>
-                    </div>
-                    
-                    <div id="bakalavr-content" class="accordion-content">
-                        <div class="sub-menu-grid">
-                            <a href="docs/malaka_bakalavr.pdf" target="_blank" class="sub-menu-item">
-                                <span class="icon">📋</span>
-                                <div>
-                                    <h4>Malaka talablari</h4>
-                                    <p>Yo'nalishning rasmiy davlat standartlari</p>
-                                </div>
-                            </a>
-                            <a href="docs/reja_bakalavr.pdf" target="_blank" class="sub-menu-item">
-                                <span class="icon">📅</span>
-                                <div>
-                                    <h4>O‘quv rejalar</h4>
-                                    <p>Semestrlar bo'yicha fanlar taqsimoti</p>
-                                </div>
-                            </a>
-                            <a href="docs/dastur_bakalavr.pdf" target="_blank" class="sub-menu-item">
-                                <span class="icon">📚</span>
-                                <div>
-                                    <h4>O‘quv dasturlari</h4>
-                                    <p>Fanlarning sillabuslari va mundarijasi</p>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+                                   
+                   <div class="program-card">
+    <div class="program-header" onclick="toggleProgram('bakalavr-content', this)">
+        <div>
+            <span class="program-badge">Bakalavriat</span>
+            <h3 class="program-title">Milliy g‘oya, ma’naviyat asoslari va huquq ta‘limi yo‘nalishi</h3>
+        </div>
+        <div class="right-area">
+            <span class="program-code">60111100</span>
+            <span class="arrow">▼</span>
+        </div>
+    </div>
 
-                <div class="program-card">
-                    <div class="program-header" onclick="toggleProgram('magistr-content', this)">
-                        <div>
-                            <span class="program-badge master">Magistratura</span>
-                            <h3 class="program-title">Ijtimoiy-gumanitar fanlarni o‘qtish metodikasi (ma’naviyat asoslari) mutaxassisligi</h3>
-                        </div>
-                        <div class="right-area">
-                            <span class="program-code">70111101</span>
-                            <span class="arrow">▼</span>
-                        </div>
-                    </div>
-                    
-                    <div id="magistr-content" class="accordion-content">
-                        <div class="sub-menu-grid">
-                            <a href="docs/malaka_magistr.pdf" target="_blank" class="sub-menu-item">
-                                <span class="icon">📋</span>
-                                <div>
-                                    <h4>Malaka talablari</h4>
-                                    <p>Magistratura mutaxassislik talablari</p>
-                                </div>
-                            </a>
-                            <a href="docs/reja_magistr.pdf" target="_blank" class="sub-menu-item">
-                                <span class="icon">📅</span>
-                                <div>
-                                    <h4>O‘quv rejalar</h4>
-                                    <p>Ilmiy va o'quv rejalari majmuasi</p>
-                                </div>
-                            </a>
-                            <a href="docs/dastur_magistr.pdf" target="_blank" class="sub-menu-item">
-                                <span class="icon">📚</span>
-                                <div>
-                                    <h4>O‘quv dasturlari</h4>
-                                    <p>Mutaxassislik fanlari dasturlari</p>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
+    <div id="bakalavr-content" class="accordion-content">
+        <div class="sub-menu-grid">
+            <a href="docs/malaka_bakalavr.pdf" target="_blank" class="sub-menu-item">
+                <span class="icon">📋</span>
+                <div>
+                    <h4>Malaka talablari</h4>
+                    <p>Davlat ta'lim standartlari</p>
                 </div>
+            </a>
+            <a href="docs/reja_bakalavr.pdf" target="_blank" class="sub-menu-item">
+                <span class="icon">📅</span>
+                <div>
+                    <h4>O‘quv rejalar</h4>
+                    <p>Fanlar taqsimoti va semestrlar</p>
+                </div>
+            </a>
+            <a href="docs/dastur_bakalavr.pdf" target="_blank" class="sub-menu-item">
+                <span class="icon">📚</span>
+                <div>
+                    <h4>O‘quv dasturlari</h4>
+                    <p>Fanlar mundarijasi va dasturi</p>
+                </div>
+            </a>
+            <a href="bitiruvchilar.html" class="sub-menu-item">
+                <span class="icon">🎓</span>
+                <div>
+                    <h4>Bitiruvchilar</h4>
+                    <p>Talabalar ro'yxati va yutuqlari</p>
+                </div>
+            </a>
+            <a href="iqtidorli_talabalar.html" class="sub-menu-item">
+                <span class="icon">⭐</span>
+                <div>
+                    <h4>Iqtidorli talabalar</h4>
+                    <p>Yutuqlar va ilmiy faoliyatlar</p>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="program-card">
+    <div class="program-header" onclick="toggleProgram('magistr-content', this)">
+        <div>
+            <span class="program-badge master">Magistratura</span>
+            <h3 class="program-title">Ijtimoiy-gumanitar fanlarni o‘qtish metodikasi (ma’naviyat asoslari) mutaxassisligi</h3>
+        </div>
+        <div class="right-area">
+            <span class="program-code">70111101</span>
+            <span class="arrow">▼</span>
+        </div>
+    </div>
+    
+    <div id="magistr-content" class="accordion-content">
+        <div class="sub-menu-grid">
+            <a href="docs/malaka_magistr.pdf" target="_blank" class="sub-menu-item">
+                <span class="icon">📋</span>
+                <div>
+                    <h4>Malaka talablari</h4>
+                    <p>Magistratura mutaxassislik talablari</p>
+                </div>
+            </a>
+            <a href="docs/reja_magistr.pdf" target="_blank" class="sub-menu-item">
+                <span class="icon">📅</span>
+                <div>
+                    <h4>O‘quv rejalar</h4>
+                    <p>Ilmiy va o'quv rejalari majmuasi</p>
+                </div>
+            </a>
+            <a href="docs/dastur_magistr.pdf" target="_blank" class="sub-menu-item">
+                <span class="icon">📚</span>
+                <div>
+                    <h4>O‘quv dasturlari</h4>
+                    <p>Mutaxassislik fanlari dasturlari</p>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
 
             </div> </div> </section> <script>
         function toggleProgram(contentId, headerElement) {
@@ -140,13 +175,21 @@
     </div>
 </footer>
 <script>
-function toggleAccordion(element) {
-    // Bosilgan header'ning otasi bo'lgan 'accordion-item' ni topamiz
-    const item = element.parentElement;
-    
-    // 'active' klassini qo'shib qo'yamiz yoki olib tashlaymiz
-    item.classList.toggle('active');
-}
+const counters = document.querySelectorAll('.stat-number');
+counters.forEach(counter => {
+    const updateCounter = () => {
+        const target = +counter.getAttribute('data-target');
+        const count = +counter.innerText;
+        const increment = target / 100;
+        if(count < target){
+            counter.innerText = Math.ceil(count + increment);
+            setTimeout(updateCounter, 20);
+        } else {
+            counter.innerText = target;
+        }
+    };
+    updateCounter();
+});
 </script>
 </body>
 </html>

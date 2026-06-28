@@ -989,4 +989,141 @@ header nav a:hover {
     font-size: 18px;
     cursor: pointer;
     padding-left: 10px;
+}/* Kartochka ichidagi sarlavha (H3 yoki sarlavha klassi uchun) */
+.card-title {
+    font-size: 16px;          /* Shriftni sal kichikroq qilish */
+    font-weight: 600;         /* Qalinroq qilib ko'zga tashlanadigan qilish */
+    white-space: nowrap;      /* Matnni bir qatorga majburlash */
+    overflow: hidden;         /* Sig'magan joyini yashirish */
+    text-overflow: ellipsis;  /* Sig'magan joyiga uchta nuqta (...) qo'yish */
+    text-align: center;
+}
+
+/* Sarlavha tagidagi izoh matni uchun */
+.card-text {
+    font-size: 12px;          /* Izoh matnini biroz kichraytirish */
+    line-height: 1.4;         /* Qatorlar orasidagi masofa */
+    word-break: break-word;   /* So'zlarni bo'g'inlab emas, butunligicha pastga tushirish */
+    text-align: center;
+}/* Kartochka ichidagi sarlavhalar uchun (Masalan: Malaka talablari, O'quv rejalari) */
+.card h3, .card-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: #0d47a1;          /* To'q ko'k rang (dizaynga mos) */
+    text-align: center;
+    margin-bottom: 8px;
+    white-space: normal;     /* Matnni tabiiy pastga tushishiga qo'yib beradi */
+    word-break: keep-all;    /* So'zlarni harflarga bo'lib yubormaydi, butunligicha saqlaydi */
+}
+
+/* Sarlavha tagidagi kichik matnlar uchun */
+.card p, .card-text {
+    font-size: 12px;
+    line-height: 1.4;
+    color: #555;
+    text-align: center;
+    word-break: keep-all;    /* Harflar ajralib ketishini oldini oladi */
+    overflow-wrap: break-word;
+}/* --- KAFEDRA KINTOCHKALARI UCHUN MAXSUS TUGATISH --- */
+
+/* 1. Asosiy to'r (Grid) konteyneri */
+.sub-menu-grid {
+    display: grid !important;
+    /* Kartochkalar ekran sig'ishiga qarab avtomatik joylashadi, minimal 180px bo'ladi */
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)) !important;
+    gap: 20px !important;            /* Kartochkalar orasidagi masofa */
+    padding: 15px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+/* 2. Har bir alohida kartochka (a tegi) */
+.sub-menu-item {
+    display: flex !important;
+    flex-direction: column !important; /* Ikonka tepada, matn pastda bo'lishi uchun */
+    align-items: center !important;    /* Ichidagi hamma narsani markazga tekshilaydi */
+    text-align: center !important;
+    padding: 20px 15px !important;    /* Ichki bo'shliqlar */
+    background: #ffffff !important;
+    border: 1px solid #e2e8f0 !important;
+    border-radius: 12px !important;    /* Burchaklarni chiroyli yumaloq qilish */
+    text-decoration: none !important;  /* Tagidagi chiziqni olib tashlaydi */
+    transition: all 0.3s ease !important;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05) !important;
+}
+
+/* Kartochkaga sichqoncha kelganda effekt */
+.sub-menu-item:hover {
+    transform: translateY(-4px) !important;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1) !important;
+    border-color: #3b82f6 !important;
+}
+
+/* 3. Ikonka stili */
+.sub-menu-item .icon {
+    font-size: 32px !important;        /* Ikonkani kattaroq va chiroyli qiladi */
+    margin-bottom: 12px !important;    /* Matndan masofasi */
+    display: inline-block !important;
+}
+
+/* 4. Sarlavhalar stili (Malaka talablari, O'quv rejalar...) */
+.sub-menu-item h4 {
+    font-size: 15px !important;
+    font-weight: 700 !important;
+    color: #1e293b !important;         /* To'q ko'rinishdagi professional rang */
+    margin: 0 0 6px 0 !important;
+    line-height: 1.3 !important;
+    word-break: keep-all !important;   /* So'zlarni harflarga bo'lib yubormaydi */
+    overflow-wrap: break-word !important;
+}
+
+/* 5. Kichik izoh matnlari stili */
+.sub-menu-item p {
+    font-size: 12px !important;
+    color: #64748b !important;         /* Yumshoq kulrang text */
+    margin: 0 !important;
+    line-height: 1.4 !important;
+    word-break: keep-all !important;   /* Bo'g'inlab xunuk ajratmaydi */
+    overflow-wrap: break-word !important;
+}/* Matn qirqilib qolishini butunlay o'chirish */
+.sub-menu-item h4, 
+.sub-menu-grid .sub-menu-item h4 {
+    max-width: 100% !important;
+    width: auto !important;
+    white-space: normal !important;   /* Matnni bir qatorga majburlashni o'chiradi */
+    overflow: visible !important;     /* Qirqib tashlashni taqiqlaydi */
+    text-overflow: clip !important;   /* Nuqtachalarni olib tashlaydi */
+}.stats-section{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+    max-width:1200px;
+    margin:60px auto;
+    padding:0 20px;
+}
+
+.stat-card{
+    background:#fff;
+    border-radius:18px;
+    padding:30px 20px;
+    text-align:center;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.stat-card:hover{
+    transform:translateY(-8px);
+}
+
+.stat-number{
+    display:block;
+    font-size:42px;
+    font-weight:700;
+    color:#1e40af;
+    margin-bottom:10px;
+}
+
+.stat-card h3{
+    font-size:18px;
+    color:#444;
 }
